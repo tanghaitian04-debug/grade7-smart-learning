@@ -1,0 +1,21 @@
+:root{
+  color-scheme:light dark;
+  --canvas:#f7f8fa; --paper:#fff; --ink:#172c42; --muted:#4f6173;
+  --navy:#1e3a5f; --brand:#215ab4; --soft:#edf3fa; --line:#d8e1e9;
+  --success:#227451; --success-wash:#e9f6ee; --error:#934026; --error-wash:#fff0e9;
+  --focus:#2563eb; --on-brand:#fff; --shadow:0 3px 12px #172c4208;
+  --ui:"Noto Sans SC","PingFang SC","Microsoft YaHei",system-ui,sans-serif;
+  --book:"Songti SC","Noto Serif CJK SC","STSong",Georgia,serif;
+  --r1:8px; --r2:14px; --r3:20px; --s1:4px; --s2:8px; --s3:12px; --s4:16px; --s5:24px; --s6:32px;
+  --tap:44px; --motion:160ms; --gutter:clamp(16px,4vw,56px);
+}
+[data-subject]{--subject:#335d8d;--wash:#e8eff9}
+[data-subject=chinese]{--subject:#9b473f;--wash:#f9eae4}
+[data-subject=english]{--subject:#855e16;--wash:#fbefce}
+[data-subject=history]{--subject:#7b5134;--wash:#f4e9dc}
+[data-subject=geo]{--subject:#216f71;--wash:#e1f0ee}
+[data-subject=bio]{--subject:#467447;--wash:#e7f1df}
+[data-subject=civics]{--subject:#72518d;--wash:#f0e8f7}
+@media(prefers-color-scheme:dark){
+ :root{--canvas:#141d28;--paper:#1b2836;--ink:#ecf1f6;--muted:#b7c5d5;--brand:#a9ccff;--soft:#273a50;--line:#34485b;--success:#90d7af;--success-wash:#203a31;--error:#ffba9d;--error-wash:#412d28;--focus:#8abaff;--shadow:none}
+}

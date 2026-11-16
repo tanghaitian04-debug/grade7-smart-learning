@@ -9,13 +9,23 @@ const data=['english','humanities','stem'].flatMap(f=>JSON.parse(readFileSync('s
 try {
  for(let i=0;i<80;i++){try{if((await fetch(base)).ok)break}catch{}await new Promise(r=>setTimeout(r,100))}
  assert((await fetch(base)).ok,'Production preview is unavailable')
- for(const [name,engine,options] of [['iPhone',webkit,devices['iPhone 13']],['Android',chromium,devices['Pixel 7']],['iPad',webkit,devices['iPad (gen 7)']],['Desktop',chromium,{viewport:{width:1440,height:900}}]]){
+ for(const [name,engine,options] of [['iPhone',webkit,devices['iPhone 13']],['Android',chromium,devices['Pixel 7']],['iPad',webkit,devices['iPad (gen 7)']],['iPad landscape',webkit,{...devices['iPad (gen 7) landscape'],colorScheme:'dark',reducedMotion:'reduce'}],['Desktop',chromium,{viewport:{width:1440,height:900}}]]){
   const browser=await engine.launch()
   try{
    const page=await browser.newPage(options);const errors=[]
    page.on('pageerror',e=>errors.push(e.message));page.on('response',r=>{if(r.status()>=400&&r.url().startsWith(base))errors.push(r.status()+' '+r.url())})
    async function go(route){await page.goto(base+'#/'+route);await page.reload();await page.locator('h1').waitFor();assert(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1),name+' overflow '+route)}
-   await go('home');assert.equal(await page.locator('.course').count(),7)
+   await go('home')
+   if(name==='Desktop'){
+    await page.keyboard.press('Tab');await page.keyboard.press('Enter')
+    assert.equal(await page.locator(':focus').getAttribute('id'),'main-content')
+   }
+   const target=await page.getByRole('button',{name:'下册',exact:true}).boundingBox()
+   assert(target&&target.height>=44&&target.width>=44)
+   await page.getByRole('button',{name:'下册',exact:true}).click()
+   await page.locator('.course[href$="/lower"]').first().waitFor()
+   await page.getByRole('button',{name:'上册',exact:true}).click()
+   assert.equal(await page.locator('.course').count(),7)
    await page.getByLabel('搜索知识点').fill('正数与负数');await page.getByRole('link',{name:'数学 · 正数与负数 ›'}).waitFor()
    for(const s of data)for(const t of ['upper','lower']){
     await go('subject/'+s.id+'/'+t);await page.getByRole('heading',{name:s.name,exact:true}).waitFor()
@@ -23,6 +33,10 @@ try {
     for(const c of s[t])for(const l of c.lessons){await go('lesson/'+l.id);await page.getByRole('heading',{name:l.title,exact:true}).waitFor();assert.equal(await page.locator('fieldset').count(),l.questions.length)}
    }
    await go('lesson/math-add');await page.locator('.katex').first().waitFor()
+   await page.getByRole('link',{name:/上一节/}).click()
+   await page.getByRole('heading',{name:'正数与负数',exact:true}).waitFor()
+   await page.getByRole('link',{name:/下一节/}).click()
+   await page.getByRole('heading',{name:'有理数的加法',exact:true}).waitFor()
    await go('lesson/math-signed')
    await page.getByRole('radio',{name:'+12元',exact:true}).check()
    await page.getByRole('radio',{name:'错误',exact:true}).check()

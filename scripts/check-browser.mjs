@@ -4,16 +4,17 @@ import { spawn } from 'node:child_process'
 import { readFileSync } from 'node:fs'
 import assert from 'node:assert/strict'
 const base='http://127.0.0.1:4187/grade7-smart-learning/'
-const server=spawn(process.execPath,['node_modules/vite/bin/vite.js','preview','--base','/grade7-smart-learning/','--port','4187','--strictPort'],{stdio:'inherit'})
+const server=spawn(process.execPath,['node_modules/vite/bin/vite.js','preview','--host','127.0.0.1','--base','/grade7-smart-learning/','--port','4187','--strictPort'],{stdio:'inherit'})
 const data=['english','humanities','stem'].flatMap(f=>JSON.parse(readFileSync('src/data/'+f+'.json','utf8')))
 try {
  for(let i=0;i<80;i++){try{if((await fetch(base)).ok)break}catch{}await new Promise(r=>setTimeout(r,100))}
+ assert((await fetch(base)).ok,'Production preview is unavailable')
  for(const [name,engine,options] of [['iPhone',webkit,devices['iPhone 13']],['Android',chromium,devices['Pixel 7']],['iPad',webkit,devices['iPad (gen 7)']],['Desktop',chromium,{viewport:{width:1440,height:900}}]]){
   const browser=await engine.launch()
   try{
    const page=await browser.newPage(options);const errors=[]
    page.on('pageerror',e=>errors.push(e.message));page.on('response',r=>{if(r.status()>=400&&r.url().startsWith(base))errors.push(r.status()+' '+r.url())})
-   async function go(route){await page.goto(base+'#/'+route);await page.locator('h1').waitFor();assert(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1),name+' overflow '+route)}
+   async function go(route){await page.goto(base+'#/'+route);await page.reload();await page.locator('h1').waitFor();assert(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1),name+' overflow '+route)}
    await go('home');assert.equal(await page.locator('.course').count(),7)
    await page.getByLabel('搜索知识点').fill('正数与负数');await page.getByRole('link',{name:'数学 · 正数与负数 ›'}).waitFor()
    for(const s of data)for(const t of ['upper','lower']){

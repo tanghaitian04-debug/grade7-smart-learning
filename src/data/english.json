@@ -1,0 +1,392 @@
+[
+  {
+    "id": "english",
+    "name": "英语",
+    "edition": "人民教育出版社 · 2022年版课标修订教材（上册2024秋、下册2025春启用；校本待核实）",
+    "sources": [
+      {
+        "title": "人民教育出版社 · 七至九年级新教材说明及单元数",
+        "url": "https://www.pep.com.cn/xw/zt/hd/12/xjcjs/cz/202510/t20251024_2004130.html"
+      },
+      {
+        "title": "教育部 · 国家课程教学用书目录",
+        "url": "https://www.moe.gov.cn/srcsite/A26/s8001/202408/W020250418502592948423.pdf"
+      },
+      {
+        "title": "上册公开目录 · 逐单元交叉核对",
+        "url": "https://m.haoduoyun.cc/book/rjb/yingyu/xa7s.shtml"
+      },
+      {
+        "title": "下册公开目录 · 逐单元交叉核对",
+        "url": "https://www.keben1.com/a/yyp72/keben.html"
+      },
+      {
+        "title": "邹城市第八中学 · 2026春英语教辅配人教版（同城旁证）",
+        "url": "https://www.jining.gov.cn/art/2026/4/22/art_87235_2876910.html"
+      }
+    ],
+    "upper": [
+      {
+        "name": "Starter Unit 1 Hello!",
+        "lessons": []
+      },
+      {
+        "name": "Starter Unit 2 Keep Tidy!",
+        "lessons": []
+      },
+      {
+        "name": "Starter Unit 3 Welcome!",
+        "lessons": []
+      },
+      {
+        "name": "Unit 1 You and Me",
+        "lessons": [
+          {
+            "id": "en-be",
+            "title": "用 am、is、are 介绍自己和朋友",
+            "goal": "能选对 be 动词，说清一个人是谁、来自哪里，并向新同学提问。",
+            "explain": [
+              "第一次见面时，中文可以直接说“我十三岁”。英语通常要把主语和描述连接起来：I am thirteen. 这里 am 把“我”和“十三岁”连接成一句完整的话。",
+              "be 要跟着主语变形。I 用 am，单数的 he、she 或一个人的名字用 is，you、we、they 用 are。只要先找准句子说的是谁，就能作出选择。",
+              "想把 You are from Jining. 变成需要回答 yes 或 no 的问句，把 are 移到主语前：Are you from Jining? 回答时改用自己的视角：Yes, I am."
+            ],
+            "life": "英语角里两名同学一起自我介绍，可以说 We are new here. 单独介绍搭档则说 She is my partner.",
+            "focus": "不要看离空格最近的名字，要看整个主语。Ming and I 表示两个人，可以换成 we。",
+            "example": "补全并提问：Rui and I ___ in Class Two. 怎样问对方“你们在二班吗”？",
+            "steps": [
+              "圈出完整主语 Rui and I，它包含两个人，等同于 we。",
+              "陈述句用 are：Rui and I are in Class Two.",
+              "面对这两人时用 you。把 are 放到开头：Are you in Class Two?"
+            ],
+            "simple": "先用一个代词替换名字：我是 I，两个人包括我就是 we。再给代词选搭档：I am，we are。",
+            "hint": "用手指指一指句中的每个人，数清后再选 be 动词。",
+            "questions": [
+              {
+                "id": "en-be-q1",
+                "type": "选择",
+                "prompt": "基础：I ___ your new classmate.",
+                "options": [
+                  "am",
+                  "is",
+                  "are"
+                ],
+                "answer": "am",
+                "why": "I 在一般现在时只和 am 搭配。"
+              },
+              {
+                "id": "en-be-q2",
+                "type": "判断",
+                "prompt": "基础：介绍两位同学可以说 They are my classmates.。",
+                "options": [
+                  "正确",
+                  "错误"
+                ],
+                "answer": "正确",
+                "why": "They 表示他们或她们，是复数主语，使用 are。"
+              },
+              {
+                "id": "en-be-q3",
+                "type": "填空",
+                "prompt": "提升：Lin and her sister ___ from Jining.（填一个 be 动词）",
+                "options": [],
+                "answer": "are",
+                "why": "Lin and her sister 是两个人，用 they 替换后就是 They are from Jining."
+              },
+              {
+                "id": "en-be-q4",
+                "type": "选择",
+                "prompt": "提升：对方问 Are you in Class Four? 你一个人作肯定回答，选哪句？",
+                "options": [
+                  "Yes, you are.",
+                  "Yes, I am.",
+                  "Yes, she is."
+                ],
+                "answer": "Yes, I am.",
+                "why": "对方用 you 指你，你自己回答时视角变为 I。"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Unit 2 We’re Family!",
+        "lessons": [
+          {
+            "id": "en-family",
+            "title": "用名词所有格说明家庭关系",
+            "goal": "能分清谁和谁有关系，写出一位家人或多位家人共同拥有的事物。",
+            "explain": [
+              "给别人看家庭相册时，“小宁的姐姐”和“姐姐的小宁”表达不同的关系。英语把表示“谁的”的名词放在前面：Ning’s sister。读到 ’s，先问“谁的”，再看后面介绍的人或物。",
+              "一位家人用单数名词，通常在词尾加 ’s，如 my aunt’s bike。如果是多位家人，而且复数已经以 s 结尾，在 s 后再加撇号，如 my parents’ room。parents 本身已经包含“父母两人”。",
+              "见到 ’s 还要看后文。Ling’s a student. 中的 ’s 可还原为 is，句意是“玲是一名学生”。Ling’s desk 中 desk 前的 Ling’s 回答“谁的”，表示所属。"
+            ],
+            "life": "在门上贴 My sister’s room，表示这是姐姐或妹妹的房间。若是专放爸爸妈妈书籍的架子，可以写 my parents’ bookshelf。",
+            "focus": "先数拥有者，再看名词有没有复数 s。房间只有一间，拥有它的人仍然可能有两位。",
+            "example": "如何表达“我父母共用的汽车”？为何不写 my parent’s car？",
+            "steps": [
+              "确定拥有者是父母两人，先写复数 parents。",
+              "parents 已以 s 结尾，在 s 后加撇号，得到 parents’。",
+              "把物品放在后面：my parents’ car。parent’s 只表示一位家长的。"
+            ],
+            "simple": "把“谁的”和“什么”分两步说：先说 Dad’s（爸爸的），再补 bag（包）。",
+            "hint": "先把物品遮住，只数拥有它的人。",
+            "questions": [
+              {
+                "id": "en-family-q1",
+                "type": "选择",
+                "prompt": "基础：哪一项表示“我叔叔的帽子”？",
+                "options": [
+                  "my uncle’s hat",
+                  "my uncles hat",
+                  "my hat’s uncle"
+                ],
+                "answer": "my uncle’s hat",
+                "why": "先写拥有者 uncle，再加 ’s，最后是帽子 hat。"
+              },
+              {
+                "id": "en-family-q2",
+                "type": "判断",
+                "prompt": "基础：Lulu’s a student. 中的 ’s 表示“……的”。",
+                "options": [
+                  "正确",
+                  "错误"
+                ],
+                "answer": "错误",
+                "why": "这里可还原为 Lulu is a student.，因此 ’s 是 is 的缩写。"
+              },
+              {
+                "id": "en-family-q3",
+                "type": "选择",
+                "prompt": "提升：两位姐姐共用一个房间，怎样标注？",
+                "options": [
+                  "my sister’s room",
+                  "my sisters’ room",
+                  "my room’s sisters"
+                ],
+                "answer": "my sisters’ room",
+                "why": "先写两位姐姐 sisters，再在复数词尾 s 之后加撇号。"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Unit 3 My School",
+        "lessons": [
+          {
+            "id": "en-there",
+            "title": "用 there is 和 there are 介绍校园",
+            "goal": "能按物品数量介绍校园设施，并向同学确认某个地方有什么。",
+            "explain": [
+              "想介绍一个地方有什么，可以从 There is 或 There are 开始。There is a reading room near our classroom. 表示教室附近有一间阅览室。这里的 there 帮我们引出后面首次出现的事物。",
+              "看要介绍的东西：一张桌子是 a desk，搭配 is；三张桌子是 three desks，搭配 are。地点可以放在末尾，告诉听者去哪里找。",
+              "询问有没有时把 is 或 are 提到开头，保留 there，例如 Are there two libraries? 简短肯定回答是 Yes, there are."
+            ],
+            "life": "带转学生参观校园，可以在走廊说 There are two pictures on the wall. 对方马上知道沿墙找哪样东西。",
+            "focus": "地点里有哪个事物，就根据这个事物的数量选 is 或 are。our school 虽然是单数，但放在地点短语里时不决定动词。",
+            "example": "用给出的词介绍学校：two gardens / in our school。",
+            "steps": [
+              "要介绍的是 two gardens，数量为二。",
+              "选 There are，并把要介绍的事物放在后面。",
+              "最后说明地点：There are two gardens in our school."
+            ],
+            "simple": "先说“有”，再说“有什么”，最后补“在哪里”。一个用 There is，多个用 There are。",
+            "hint": "暂时遮住地点短语，在剩下的词中寻找要介绍的事物。",
+            "questions": [
+              {
+                "id": "en-there-q1",
+                "type": "填空",
+                "prompt": "基础：There ___ a clock above the door.（填 is 或 are）",
+                "options": [],
+                "answer": "is",
+                "why": "a clock 是一只钟，用单数形式 is。"
+              },
+              {
+                "id": "en-there-q2",
+                "type": "判断",
+                "prompt": "基础：There are four desks in the room. 表示房间里有四张桌子。",
+                "options": [
+                  "正确",
+                  "错误"
+                ],
+                "answer": "正确",
+                "why": "four desks 是复数，与 are 搭配。"
+              },
+              {
+                "id": "en-there-q3",
+                "type": "选择",
+                "prompt": "提升：想确认教学楼旁是否有两片操场，怎样问？",
+                "options": [
+                  "Is there two playgrounds by the building?",
+                  "Are there two playgrounds by the building?",
+                  "There are a playground by the building."
+                ],
+                "answer": "Are there two playgrounds by the building?",
+                "why": "核心名词是复数 playgrounds，一般疑问句以 Are there 开头。"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Unit 4 My Favourite Subject",
+        "lessons": []
+      },
+      {
+        "name": "Unit 5 Fun Clubs",
+        "lessons": []
+      },
+      {
+        "name": "Unit 6 A Day in the Life",
+        "lessons": []
+      },
+      {
+        "name": "Unit 7 Happy Birthday!",
+        "lessons": []
+      }
+    ],
+    "lower": [
+      {
+        "name": "Unit 1 Animal Friends",
+        "lessons": [
+          {
+            "id": "en-why",
+            "title": "用 why 和 because 谈喜欢的动物",
+            "goal": "能问别人为什么喜欢某种动物，并用一个完整的理由回答。",
+            "explain": [
+              "知道别人喜欢什么以后，常常还想了解原因。Why do you like rabbits? 中的 why 问“为什么”。do 帮助 like 构成问句，后面的 like 使用原形。",
+              "对话里可以用 Because they are quiet. 回答。they 指前面的复数 rabbits，quiet 是安静的。想单独写成完整句子，可写 I like rabbits because they are quiet.，把喜好和原因连起来。",
+              "问第三人称单数时，助动词要变为 does：Why does Mei like rabbits? does 已经表示了人称，后面的 like 仍然用原形。"
+            ],
+            "life": "学校英语角讨论最想观察哪种动物，有人说 I like birds because they can sing. 他用“会鸣叫”解释了自己的选择。",
+            "focus": "问原因时用 why；问地点时用 where。because 后面的内容要真正解释前面的喜好。",
+            "example": "同桌说 Mei likes cats. 如何追问她喜欢猫的原因，并用“它们很有趣”回答？",
+            "steps": [
+              "要问原因，开头用 Why。Mei 是第三人称单数，接 does。",
+              "补上主语和动词原形：Why does Mei like cats?",
+              "回答时 cats 换成 they：Because they are interesting."
+            ],
+            "simple": "想象采访同学：先问喜欢什么，再追问 Why? 答案就是“因为……”后面的那件事。",
+            "hint": "检查问句里的助动词：有了 does，后面的动词还需要加 s 吗？",
+            "questions": [
+              {
+                "id": "en-why-q1",
+                "type": "选择",
+                "prompt": "基础：哪一个词用来询问原因？",
+                "options": [
+                  "Why",
+                  "Where",
+                  "When"
+                ],
+                "answer": "Why",
+                "why": "Why 问原因；Where 问地点，When 问时间。"
+              },
+              {
+                "id": "en-why-q2",
+                "type": "填空",
+                "prompt": "提升：Why does Tom ___ pandas?（填 like 的正确形式）",
+                "options": [],
+                "answer": "like",
+                "why": "does 后接动词原形，不能再加 s。"
+              },
+              {
+                "id": "en-why-q3",
+                "type": "选择",
+                "prompt": "提升：哪句直接回答 Why do you like birds?",
+                "options": [
+                  "In the park.",
+                  "Because they sing beautifully.",
+                  "On Saturday."
+                ],
+                "answer": "Because they sing beautifully.",
+                "why": "鸟儿唱得好听可以解释喜欢它们的原因，地点和时间不能直接解释。"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Unit 2 No Rules, No Order",
+        "lessons": [
+          {
+            "id": "en-rules",
+            "title": "用祈使句写清楚课堂规则",
+            "goal": "能看懂以动词开头的规则，并把肯定指令改成禁止做某事。",
+            "explain": [
+              "门口贴着 Close the door, please. 即使没有写出 you，读者也明白这是对自己说的。英语用动词原形开头，直接请对方做一件事，这种句子叫祈使句。",
+              "禁止做某件事，可以写 Don’t 加动词原形，例如 Don’t shout in the library. 表示在图书馆内不要喊叫。please 可让指令听起来更客气，但不会改变动作本身。",
+              "设计规则先想清场景需要的行为。Keep quiet. 要求保持安静；Don’t eat near the computers. 指明了不能做的动作和适用地点。"
+            ],
+            "life": "机房门口的告示可以写 Keep drinks outside.，意思是饮料留在门外。它明确给出了同学可以采取的动作。",
+            "focus": "Don’t 后面用动词原形。Be quiet. 中的 be 已经是动词，否定形式为 Don’t be noisy.",
+            "example": "把“请不要在走廊里跑”写成英文告示。",
+            "steps": [
+              "确定动作“跑”为 run，地点“在走廊里”为 in the hallway。",
+              "要禁止这一动作，在 run 前加 Don’t。",
+              "加上 please，使语气更客气：Please don’t run in the hallway."
+            ],
+            "simple": "把告示想成有人直接对你说话：Open the door. 是请你开门；Don’t open the door. 是请你别开门。",
+            "hint": "先找句子要人做的动作，再判断规则允许还是禁止这个动作。",
+            "questions": [
+              {
+                "id": "en-rules-q1",
+                "type": "选择",
+                "prompt": "基础：哪句话请人轻轻关门？",
+                "options": [
+                  "Close the door gently, please.",
+                  "The door is open.",
+                  "Can I see the door?"
+                ],
+                "answer": "Close the door gently, please.",
+                "why": "Close 直接要求做关门的动作，gently 补充怎样关。"
+              },
+              {
+                "id": "en-rules-q2",
+                "type": "判断",
+                "prompt": "提升：Don’t makes noise. 是规范的英文规则写法。",
+                "options": [
+                  "正确",
+                  "错误"
+                ],
+                "answer": "错误",
+                "why": "Don’t 后用动词原形，应为 Don’t make noise.。"
+              },
+              {
+                "id": "en-rules-q3",
+                "type": "填空",
+                "prompt": "提升：Please don’t ___ late for class.（填 be 的正确形式）",
+                "options": [],
+                "answer": "be",
+                "why": "be late 表示迟到；don’t 后使用原形 be。"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Unit 3 Keep Fit",
+        "lessons": []
+      },
+      {
+        "name": "Unit 4 Eat Well",
+        "lessons": []
+      },
+      {
+        "name": "Unit 5 Here and Now",
+        "lessons": []
+      },
+      {
+        "name": "Unit 6 Rain or Shine",
+        "lessons": []
+      },
+      {
+        "name": "Unit 7 A Day to Remember",
+        "lessons": []
+      },
+      {
+        "name": "Unit 8 Once upon a Time",
+        "lessons": []
+      }
+    ]
+  }
+]
